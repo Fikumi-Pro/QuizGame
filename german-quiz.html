@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="screen active" id="start-screen">
+            <h1>Quiz Time!</h1>
+            <p>Test your knowledge of Germany with these fun questions</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div class="screen" id="quiz-screen">
+
+            <div class="quiz-header">
+                <h2 id="question-text">Question goes here</h2>
+                <div class="quiz-info">
+                    <p>
+                        Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+                    </p>
+
+                    <p>
+                        Score: <span id="score">0</span>
+                    </p>
+
+
+                </div>
+
+            </div>
+
+            <div id="answers-container" class="answers-container">
+
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+
+                <div id="result-message">Good job!</div>
+
+            </div>
+            <button id="restart-btn">Restart Quiz</button>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+        quizQuestions = [
+            {
+                question: "What was the capital of East Germany (GDR)?",
+                answers: [
+                    { text: "Dresden", correct: false },
+                    { text: "Leipzig", correct: false },
+                    { text: "Frankfurt", correct: false },
+                    { text: "East Berlin", correct: true },
+                ],
+            },
+            {
+                question: "In which year was the Federal Republic of Germany founded?",
+                answers: [
+                    { text: "1933", correct: false },
+                    { text: "1949", correct: true },
+                    { text: "1955", correct: false },
+                    { text: "1990", correct: false },
+                ],
+            },
+            {
+                question: "Which river is the longest in Germany?",
+                answers: [
+                    { text: "Danube", correct: false },
+                    { text: "Elbe", correct: false },
+                    { text: "Main", correct: false },
+                    { text: "Rhine", correct: true },
+                ],
+            },
+            {
+                question: "What is the name of the German federal parliament?",
+                answers: [
+                    { text: "Bundesrat", correct: false },
+                    { text: "Federal Council", correct: false },
+                    { text: "Bundestag", correct: true },
+                    { text: "Supreme Court", correct: false },
+                ],
+            },
+            {
+                question: "Who was the first Chancellor of the Federal Republic of Germany?",
+                answers: [
+                    { text: "Helmut Kohl", correct: false },
+                    { text: "Konrad Adenauer", correct: true },
+                    { text: "Angela Merkel", correct: false },
+                    { text: "Ludwig Erhard", correct: false },
+                ],
+            }
+        ]
+    </script>
+</body>
+
+</html>

@@ -15,7 +15,7 @@ const restartButton = document.getElementById("restart-btn");
 const progressBar = document.getElementById("progress");
 
 
-const quizQuestions = [
+let quizQuestions = [
     {
         question: "What is the capital of France?",
         answers: [
