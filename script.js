@@ -176,3 +176,7 @@ function restartQuiz() {
 
     startQuiz();
 }
+
+function getRandom(questions) {
+    return questions
+}

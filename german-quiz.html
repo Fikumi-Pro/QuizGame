@@ -60,53 +60,55 @@
     </div>
     <script src="script.js"></script>
     <script>
-        quizQuestions = [
-            {
-                question: "What was the capital of East Germany (GDR)?",
-                answers: [
-                    { text: "Dresden", correct: false },
-                    { text: "Leipzig", correct: false },
-                    { text: "Frankfurt", correct: false },
-                    { text: "East Berlin", correct: true },
-                ],
-            },
-            {
-                question: "In which year was the Federal Republic of Germany founded?",
-                answers: [
-                    { text: "1933", correct: false },
-                    { text: "1949", correct: true },
-                    { text: "1955", correct: false },
-                    { text: "1990", correct: false },
-                ],
-            },
-            {
-                question: "Which river is the longest in Germany?",
-                answers: [
-                    { text: "Danube", correct: false },
-                    { text: "Elbe", correct: false },
-                    { text: "Main", correct: false },
-                    { text: "Rhine", correct: true },
-                ],
-            },
-            {
-                question: "What is the name of the German federal parliament?",
-                answers: [
-                    { text: "Bundesrat", correct: false },
-                    { text: "Federal Council", correct: false },
-                    { text: "Bundestag", correct: true },
-                    { text: "Supreme Court", correct: false },
-                ],
-            },
-            {
-                question: "Who was the first Chancellor of the Federal Republic of Germany?",
-                answers: [
-                    { text: "Helmut Kohl", correct: false },
-                    { text: "Konrad Adenauer", correct: true },
-                    { text: "Angela Merkel", correct: false },
-                    { text: "Ludwig Erhard", correct: false },
-                ],
-            }
-        ]
+        const manyQuestions = []
+        quizQuestions = getRandom(manyQuestions),
+            quizQuestions = [
+                {
+                    question: "What was the capital of East Germany (GDR)?",
+                    answers: [
+                        { text: "Dresden", correct: false },
+                        { text: "Leipzig", correct: false },
+                        { text: "Frankfurt", correct: false },
+                        { text: "East Berlin", correct: true },
+                    ],
+                },
+                {
+                    question: "In which year was the Federal Republic of Germany founded?",
+                    answers: [
+                        { text: "1933", correct: false },
+                        { text: "1949", correct: true },
+                        { text: "1955", correct: false },
+                        { text: "1990", correct: false },
+                    ],
+                },
+                {
+                    question: "Which river is the longest in Germany?",
+                    answers: [
+                        { text: "Danube", correct: false },
+                        { text: "Elbe", correct: false },
+                        { text: "Main", correct: false },
+                        { text: "Rhine", correct: true },
+                    ],
+                },
+                {
+                    question: "What is the name of the German federal parliament?",
+                    answers: [
+                        { text: "Bundesrat", correct: false },
+                        { text: "Federal Council", correct: false },
+                        { text: "Bundestag", correct: true },
+                        { text: "Supreme Court", correct: false },
+                    ],
+                },
+                {
+                    question: "Who was the first Chancellor of the Federal Republic of Germany?",
+                    answers: [
+                        { text: "Helmut Kohl", correct: false },
+                        { text: "Konrad Adenauer", correct: true },
+                        { text: "Angela Merkel", correct: false },
+                        { text: "Ludwig Erhard", correct: false },
+                    ],
+                }
+            ]
     </script>
 </body>
 
