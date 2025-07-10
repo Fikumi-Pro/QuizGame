@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu" id="menu-screen">
+        <div class="menu-inner">
+
+            <a href="/index.html" aria-label="Go to homepage">
+                <svg class="home-btn" width="50" height="50" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor">
+                    <path d="M32 10L6 30h8v24h14V40h8v14h14V30h8L32 10z" />
+                    <path d="M0 0h64v64H0z" fill="none" />
+                </svg>
+            </a>
+
+            <a class="quiz-item" href="/general-quiz.html">General Quiz</a>
+            <a class="quiz-item" href="/german-quiz.html">German Quiz</a>
+            <a class="quiz-item" href="/polish-quiz.html">Polish Quiz</a>
+
+
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="screen active" id="start-screen">
+            <h1>Quiz Time!</h1>
+            <p>Test your knowledge of France with these fun questions</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div class="screen" id="quiz-screen">
+
+            <div class="quiz-header">
+                <h2 id="question-text">Question goes here</h2>
+                <div class="quiz-info">
+                    <p>
+                        Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+                    </p>
+
+                    <p>
+                        Score: <span id="score">0</span>
+                    </p>
+
+
+                </div>
+
+            </div>
+
+            <div id="answers-container" class="answers-container">
+
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+
+                <div id="result-message">Good job!</div>
+
+            </div>
+            <button id="restart-btn">Restart Quiz</button>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+        quizQuestions = [
+            {
+                question: "What is the capital city of France?",
+                answers: [
+                    { text: "Marseille", correct: false },
+                    { text: "Lyon", correct: false },
+                    { text: "Paris", correct: true },
+                    { text: "Toulouse", correct: false },
+                ],
+            },
+            {
+                question: "Which famous French monument was a gift from France to the United States?",
+                answers: [
+                    { text: "Arc de Triomphe", correct: false },
+                    { text: "Eiffel Tower", correct: false },
+                    { text: "Notre-Dame Cathedral", correct: false },
+                    { text: "Statue of Liberty", correct: true },
+                ],
+            },
+            {
+                question: "Which French region is best known for producing Champagne?",
+                answers: [
+                    { text: "Bordeaux", correct: false },
+                    { text: "Burgundy", correct: false },
+                    { text: "Loire Valley", correct: false },
+                    { text: "Champagne", correct: true },
+                ],
+            },
+            {
+                question: "What is the name of the French national anthem?",
+                answers: [
+                    { text: "La Vie en Rose", correct: false },
+                    { text: "La Marseillaise", correct: true },
+                    { text: "Liberté, Égalité, Fraternité", correct: false },
+                    { text: "Le Chant du Départ", correct: false },
+                ],
+            },
+            {
+                question: "What type of government does France have?",
+                answers: [
+                    { text: "Absolute monarchy", correct: false },
+                    { text: "Federal republic", correct: false },
+                    { text: "Constitutional monarchy", correct: false },
+                    { text: "Semi-presidential republic", correct: true },
+                ],
+            }
+        ]
+    </script>
+
+</body>
+
+</html>

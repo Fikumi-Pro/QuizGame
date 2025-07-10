@@ -178,5 +178,6 @@ function restartQuiz() {
 }
 
 function getRandom(questions) {
+    // logic to take random items
     return questions
 }

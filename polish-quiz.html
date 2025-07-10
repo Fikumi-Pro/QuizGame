@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
+    <title>Polish Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,9 +20,9 @@
                 </svg>
             </a>
 
+            <a class="quiz-item" href="/general-quiz.html">General Quiz</a>
             <a class="quiz-item" href="/german-quiz.html">German Quiz</a>
             <a class="quiz-item" href="/french-quiz.html">French Quiz</a>
-            <a class="quiz-item" href="/polish-quiz.html">Polish Quiz</a>
 
 
         </div>
@@ -31,7 +31,7 @@
 
         <div class="screen active" id="start-screen">
             <h1>Quiz Time!</h1>
-            <p>Test your general knowledge with these fun questions</p>
+            <p>Test your knowledge of Poland with these fun questions</p>
             <button id="start-btn">Start Quiz</button>
         </div>
 
@@ -77,6 +77,56 @@
 
     </div>
     <script src="script.js"></script>
+    <script>
+        quizQuestions = [
+            {
+                question: "What is the capital city of Poland?",
+                answers: [
+                    { text: "Kraków", correct: false },
+                    { text: "Gdańsk", correct: false },
+                    { text: "Warsaw", correct: true },
+                    { text: "Wrocław", correct: false },
+                ],
+            },
+            {
+                question: "Which sea borders Poland to the north?",
+                answers: [
+                    { text: "Mediterranean Sea", correct: false },
+                    { text: "Baltic Sea", correct: true },
+                    { text: "North Sea", correct: false },
+                    { text: "Black Sea", correct: false },
+                ],
+            },
+            {
+                question: "What currency is used in Poland?",
+                answers: [
+                    { text: "Euro", correct: false },
+                    { text: "Zloty", correct: true },
+                    { text: "Krona", correct: false },
+                    { text: "Forint", correct: false },
+                ],
+            },
+            {
+                question: "Which famous Polish scientist developed the heliocentric theory?",
+                answers: [
+                    { text: "Allbert Einstein", correct: false },
+                    { text: "Isaac Newton", correct: false },
+                    { text: "Nicolaus Copernicus", correct: true },
+                    { text: "Marie Curie", correct: false },
+                ],
+            },
+            {
+                question: "Poland is a member of which international organization?",
+                answers: [
+                    { text: "OPEC", correct: false },
+                    { text: "ASEAN", correct: false },
+                    { text: "NATO", correct: true },
+                    { text: "MERCOSUR", correct: false },
+                ],
+            }
+        ]
+    </script>
+
 </body>
 
 </html>
