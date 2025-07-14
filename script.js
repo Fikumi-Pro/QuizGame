@@ -177,7 +177,22 @@ function restartQuiz() {
     startQuiz();
 }
 
-function getRandom(questions) {
-    // logic to take random items
-    return questions
+function getRandomQuestions(quizArray, count = 5) {
+    const result = [];
+    const usedIndices = new Set();
+
+    while (result.length < count && usedIndices.size < quizArray.length) {
+        const index = Math.floor(Math.random() * quizArray.length);
+        if (!usedIndices.has(index)) {
+            usedIndices.add(index);
+            result.push(quizArray[index]);
+        }
+    }
+
+    return result;
+}
+
+function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    menu.classList.toggle("open");
 }

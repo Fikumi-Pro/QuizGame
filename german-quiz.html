@@ -23,12 +23,17 @@
             <a class="quiz-item" href="/general-quiz.html">General Quiz</a>
             <a class="quiz-item" href="/french-quiz.html">French Quiz</a>
             <a class="quiz-item" href="/polish-quiz.html">Polish Quiz</a>
-
-
-
+            <img class="hide-on-desktop" onclick="toggleMenu()" src="hamburger-menu.svg" alt="hamburger-menu">
 
         </div>
     </div>
+    <div id="sideMenu" class="side-menu">
+
+        <a class="quiz-item" href="/german-quiz.html">German Quiz</a>
+        <a class="quiz-item" href="/french-quiz.html">French Quiz</a>
+        <a class="quiz-item" href="/polish-quiz.html ">Polish Quiz</a>
+    </div>
+
     <div class="container">
 
         <div class="screen active" id="start-screen">
@@ -80,55 +85,190 @@
     </div>
     <script src="script.js"></script>
     <script>
-        const manyQuestions = []
-        quizQuestions = getRandom(manyQuestions),
-            quizQuestions = [
-                {
-                    question: "What was the capital of East Germany (GDR)?",
-                    answers: [
-                        { text: "Dresden", correct: false },
-                        { text: "Leipzig", correct: false },
-                        { text: "Frankfurt", correct: false },
-                        { text: "East Berlin", correct: true },
-                    ],
-                },
-                {
-                    question: "In which year was the Federal Republic of Germany founded?",
-                    answers: [
-                        { text: "1933", correct: false },
-                        { text: "1949", correct: true },
-                        { text: "1955", correct: false },
-                        { text: "1990", correct: false },
-                    ],
-                },
-                {
-                    question: "Which river is the longest in Germany?",
-                    answers: [
-                        { text: "Danube", correct: false },
-                        { text: "Elbe", correct: false },
-                        { text: "Main", correct: false },
-                        { text: "Rhine", correct: true },
-                    ],
-                },
-                {
-                    question: "What is the name of the German federal parliament?",
-                    answers: [
-                        { text: "Bundesrat", correct: false },
-                        { text: "Federal Council", correct: false },
-                        { text: "Bundestag", correct: true },
-                        { text: "Supreme Court", correct: false },
-                    ],
-                },
-                {
-                    question: "Who was the first Chancellor of the Federal Republic of Germany?",
-                    answers: [
-                        { text: "Helmut Kohl", correct: false },
-                        { text: "Konrad Adenauer", correct: true },
-                        { text: "Angela Merkel", correct: false },
-                        { text: "Ludwig Erhard", correct: false },
-                    ],
-                }
-            ]
+        const germanyQuiz = [
+            {
+                question: "What is the capital of Germany?",
+                answers: [
+                    { text: "Munich", correct: false },
+                    { text: "Berlin", correct: true },
+                    { text: "Frankfurt", correct: false },
+                    { text: "Hamburg", correct: false },
+                ],
+            },
+            {
+                question: "Which river runs through the city of Cologne?",
+                answers: [
+                    { text: "Danube", correct: false },
+                    { text: "Elbe", correct: false },
+                    { text: "Rhine", correct: true },
+                    { text: "Main", correct: false },
+                ],
+            },
+            {
+                question: "What is the German word for “Germany”?",
+                answers: [
+                    { text: "Germania", correct: false },
+                    { text: "Deutscherland", correct: false },
+                    { text: "Deutschland", correct: true },
+                    { text: "Germanien", correct: false },
+                ],
+            },
+            {
+                question: "Which of these cities is famous for hosting Oktoberfest?",
+                answers: [
+                    { text: "Berlin", correct: false },
+                    { text: "Munich", correct: true },
+                    { text: "Stuttgart", correct: false },
+                    { text: "Düsseldorf", correct: false },
+                ],
+            },
+            {
+                question: "Which German car manufacturer has a headquarters in Wolfsburg?",
+                answers: [
+                    { text: "BMW", correct: false },
+                    { text: "Mercedes-Benz", correct: false },
+                    { text: "Audi", correct: false },
+                    { text: "Volkswagen", correct: true },
+                ],
+            },
+            {
+                question: "Which mountain is the highest in Germany?",
+                answers: [
+                    { text: "Feldberg", correct: false },
+                    { text: "Brocken", correct: false },
+                    { text: "Zugspitze", correct: true },
+                    { text: "Watzmann", correct: false },
+                ],
+            },
+            {
+                question: "When did the Berlin Wall fall?",
+                answers: [
+                    { text: "1987", correct: false },
+                    { text: "1989", correct: true },
+                    { text: "1990", correct: false },
+                    { text: "1991", correct: false },
+                ],
+            },
+            {
+                question: "What colors are on the German flag (from top to bottom)?",
+                answers: [
+                    { text: "Red, Black, Yellow", correct: false },
+                    { text: "Black, Red, Gold", correct: true },
+                    { text: "Black, Yellow, Red", correct: false },
+                    { text: "Red, Yellow, Black", correct: false },
+                ],
+            },
+            {
+                question: "Who was the first Chancellor of West Germany after WWII?",
+                answers: [
+                    { text: "Helmut Kohl", correct: false },
+                    { text: "Konrad Adenauer", correct: true },
+                    { text: "Willy Brandt", correct: false },
+                    { text: "Angela Merkel", correct: false },
+                ],
+            },
+            {
+                question: "Which German city is known for being a major financial center?",
+                answers: [
+                    { text: "Berlin", correct: false },
+                    { text: "Frankfurt", correct: true },
+                    { text: "Bonn", correct: false },
+                    { text: "Leipzig", correct: false },
+                ],
+            },
+            {
+                question: "What is Germany’s national dish often considered to be?",
+                answers: [
+                    { text: "Bratwurst", correct: false },
+                    { text: "Pretzel", correct: false },
+                    { text: "Sauerbraten", correct: true },
+                    { text: "Schnitzel", correct: false },
+                ],
+            },
+            {
+                question: "Which German composer wrote the 9th Symphony (Ode to Joy)?",
+                answers: [
+                    { text: "Beethoven", correct: true },
+                    { text: "Bach", correct: false },
+                    { text: "Wagner", correct: false },
+                    { text: "Mozart", correct: false },
+                ],
+            },
+            {
+                question: "Which major event is held in Berlin each February?",
+                answers: [
+                    { text: "Oktoberfest", correct: false },
+                    { text: "Berlinale (Berlin Film Festival)", correct: true },
+                    { text: "Love Parade", correct: false },
+                    { text: "Frankfurt Book Fair", correct: false },
+                ],
+            },
+            {
+                question: "Which German state is the largest by area?",
+                answers: [
+                    { text: "North Rhine-Westphalia", correct: false },
+                    { text: "Bavaria", correct: true },
+                    { text: "Hesse", correct: false },
+                    { text: "Saxony", correct: false },
+                ],
+            },
+            {
+                question: "Germany shares a border with how many countries?",
+                answers: [
+                    { text: "7", correct: false },
+                    { text: "8", correct: false },
+                    { text: "9", correct: true },
+                    { text: "10", correct: false },
+                ],
+            },
+            {
+                question: "Which German invention is considered the first printing press?",
+                answers: [
+                    { text: "Diesel engine", correct: false },
+                    { text: "Electric motor", correct: false },
+                    { text: "Gutenberg printing press", correct: true },
+                    { text: "Telegraph", correct: false },
+                ],
+            },
+            {
+                question: "Which political party is traditionally conservative in Germany?",
+                answers: [
+                    { text: "SPD", correct: false },
+                    { text: "Die Grünen", correct: false },
+                    { text: "FDP", correct: false },
+                    { text: "CDU/CSU", correct: true },
+                ],
+            },
+            {
+                question: "Which sea borders Germany to the north?",
+                answers: [
+                    { text: "Black Sea", correct: false },
+                    { text: "North Sea", correct: true },
+                    { text: "Adriatic Sea", correct: false },
+                    { text: "Baltic Sea", correct: false },
+                ],
+            },
+            {
+                question: "Which fairy tale authors were born in Germany?",
+                answers: [
+                    { text: "Hans Christian Andersen", correct: false },
+                    { text: "Brothers Grimm", correct: true },
+                    { text: "J.R.R. Tolkien", correct: false },
+                    { text: "Charles Perrault", correct: false },
+                ],
+            },
+            {
+                question: "Which global sports event did Germany win in 2014?",
+                answers: [
+                    { text: "FIFA World Cup", correct: true },
+                    { text: "UEFA Euro", correct: false },
+                    { text: "Rugby World Cup", correct: false },
+                    { text: "Olympic Games", correct: false },
+                ],
+            },
+        ];
+
+        quizQuestions = getRandomQuestions(germanyQuiz)           
     </script>
 </body>
 

@@ -81,6 +81,10 @@ body {
     align-items: center;
 }
 
+.hide-on-desktop {
+    display: none
+}
+
 
 .home-btn {
     color: #e86a33;
@@ -89,14 +93,43 @@ body {
     margin-right: 16px;
 }
 
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
 .quiz-item {
     text-decoration: none;
     color: #666;
-    margin-left: 8px;
+    margin-left: 16px;
     margin-right: 8px;
     font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: none;
 }
 
 .quiz-item:hover {
@@ -233,4 +266,38 @@ button:hover {
     }
 
 
+}
+
+@media only screen and (max-width: 768px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hide-on-desktop {
+        display: flex;
+        width: 35px;
+        height: 20px;
+        cursor: pointer;
+        margin-left: auto
+    }
+
+    .hide-on-desktop {
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .quiz-item {
+        display: block;
+    }
+}
+
+.side-menu .quiz-item {
+    display: block;
+}
+
+.side-menu .quiz-item:hover {
+    color: #666
 }
